@@ -13,7 +13,12 @@ public class T {
     public void m() {
         synchronized (o) {
             count--;
-            System.out.println(Thread.currentThread().getName() + "count = " + count);
+            System.out.println(Thread.currentThread().getName() + " count = " + count);
         }
+    }
+
+    public static void main(String[] args) {
+        T t = new T();
+        t.m();
     }
 }
